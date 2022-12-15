@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+a {
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.header {
+    z-index: 12;
+    position: fixed;
+    width: 100%;
+    color: #FFF;
+    background-color: rgba(255, 144, 0);
+}
+.header a {
+    color: #FFF;
+}
+.wrapper-content {
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+.main-content {
+    max-width: 1050px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+.menu-main-content {
+    width: 100%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+.menu-content-list-logo {
+    cursor: pointer;
+    width: 10%;
+}
+.menu-content-list-categories {
+    padding: 0 20px;
+    width: 70%;
+}
+.menu-content-list-categories a {
+    color: #FFF;
+    text-decoration: none;
+    cursor: default;
+}
+.menu-content-list-categories h1 {
+    transition: all 0.3s ease-in-out;
+}
+.menu-content-list-categories h1:hover {
+    color: black;
+}
+.categories-main-content {
+    display: flex;
+}
+.categories-main-content li {
+    cursor: pointer;
+    padding: 0 10px;
+}
+.categories-main-content h1 {
+    text-transform: uppercase;
+}
+.menu-content-list-profile {
+    width: 25%;
+}
+.profile-subscription-system {
+    width: 300px;
+}
+.profile-main-content {
+    width: 100%;
+    display: flex;
+}
+.profile-main-content li {
+    padding: 0 7px;
+}
+.profile-promotion-system {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+}
+.remember-password, .agree-to-terms {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+.profile-promotion-system:hover {
+    border: 1px solid black;
+    color: black;
+}
+.profile-promotion-system h1 {
+    padding: 9px 20px;
+}
+.profile-search-system {
+    cursor: pointer;
+    margin: auto;
+}
+.profile-search-system svg {
+    transition: all 0.3s ease-in-out;
+}
+.profile-promotion-system-different {
+    display: none;
+}
+.profile-search-system svg:hover {
+    fill: black;
+}
+.profile-login-system {
+    margin: auto;
+}
+.profile-login-system h1 {
+    transition: all 0.3s ease-in-out;
+}
+.profile-login-system h1:hover {
+    color: black;
+}
+
+/* LOGIN */
+
+.hero{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.form-box{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #FFFFFF;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+
+.button-box a {
+    cursor: pointer;
+}
+
+.toogle-btn{
+    padding: 10px 30px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f,#ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.social-icons{
+    margin: 30px auto;
+    text-align: center;
+}
+
+.social-icons i svg{
+    width: 30px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 50%;
+    fill: #ff105f;
+}
+
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    border-right: 0;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: orange;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+
+span{
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+#register{
+    left: 50px;
+}
+
+.mistake_error {
+    font-size: 14px;
+    color: orange;
+    padding: 15px 0 0 0;
+}
