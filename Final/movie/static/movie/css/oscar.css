@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+a {
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.header {
+    z-index: 12;
+    position: fixed;
+    width: 100%;
+    color: #FFF;
+    background-color: rgb(255, 144, 0);
+}
+.header a {
+    color: #FFF;
+}
+.wrapper-content {
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+.main-content {
+    max-width: 1050px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+.menu-main-content {
+    width: 100%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+.menu-content-list-logo {
+    cursor: pointer;
+    width: 10%;
+}
+.menu-content-list-categories {
+    padding: 0 20px;
+    width: 70%;
+}
+.menu-content-list-categories a {
+    color: #FFF;
+    text-decoration: none;
+    cursor: default;
+}
+.menu-content-list-categories h1 {
+    transition: all 0.3s ease-in-out;
+}
+.menu-content-list-categories h1:hover {
+    color: #000;
+}
+.categories-main-content {
+    display: flex;
+}
+.categories-main-content li {
+    cursor: pointer;
+    padding: 0 10px;
+}
+.categories-main-content h1 {
+    text-transform: uppercase;
+}
+.menu-content-list-profile {
+    width: 25%;
+}
+.profile-subscription-system {
+    width: 300px;
+}
+.profile-main-content {
+    width: 100%;
+    display: flex;
+}
+.profile-main-content li {
+    padding: 0 7px;
+}
+.profile-promotion-system {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+}
+.profile-promotion-system:hover {
+    border: 1px solid #000;
+    color: #000;
+}
+.profile-promotion-system h1 {
+    padding: 7px 15px;
+}
+.profile-search-system {
+    cursor: pointer;
+    margin: auto;
+}
+.profile-search-system svg {
+    transition: all 0.3s ease-in-out;
+}
+.profile-search-system svg:hover {
+    fill: #000;
+}
+.profile-login-system {
+    margin: auto;
+}
+.profile-login-system h1 {
+    transition: all 0.3s ease-in-out;
+}
+.profile-login-system h1:hover {
+    color: #000;
+}
+
+
+/* ========================================== HEADER - END ========================================== */
+
+.section {
+    padding-top: 150px;
+}
+.main-content-oscar-of-products {
+    width: 100%;
+    display: flex;
+}
+.oscar-of-products-text-block {
+    display: inline-block;
+    justify-content: flex-start;
+    width: 70%;
+}
+.oscar-of-products-text-block h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+.oscar-of-products-text-block p {
+    font-family: "Graphik Kinopoisk LC Web",Arial,Tahoma,Verdana,sans-serif;
+    display: inline-block;
+    width: 70%;
+    padding-top: 30px;
+    font-size: 16px;
+}
+.oscar-of-products-image-block {
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+}
+.oscar-of-products-image-block img {
+    width: 200px;
+    border-radius: 7px;
+}
+.top5-system-main-text-container {
+    width: 100%;
+    padding: 25px 0;
+    align-items: center;
+}
+.text-container-slider-block {
+    width: 100%;
+    display: flex;
+}
+.slider-block-main-container {
+    display: flex;
+    justify-content: flex-end;
+}
+.slider-blocks {
+    padding: 0 15px 0 0;
+}
+.slider-block-main-container h2:hover {
+    color: #717171;
+    cursor: pointer;
+}
+.hr {
+    width: 100%;
+    border: 1px solid #717171;
+    margin: 0 0 25px 0;
+}
+.actors-block-grid-container-main {
+    display: grid;
+}
+.watching-a-cinema-background-procentage-block {
+    width: 70%;
+    background-color: #ddd;
+}
+.watching-a-cinema-background-procentage-block h3 {
+    color: #FFF;
+    background-color: #093;
+    display: inline-block;
+    padding: 7px;
+}
+.main-content-watching-a-cinema {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 25px 0;
+}
+.main-rating-client-rating-block svg {
+    display: none;
+}
+.main-rating-client-rating-block:hover {
+    background-color: #FFF;
+}
+.main-rating-client-rating-block:hover h4 {
+    display: none;
+}
+.main-rating-client-rating-block:hover svg {
+    display: block;
+}
+.main-rating-client-rating-block-different {
+    background-color: #FFF;
+    border: 1px solid #717171;
+    padding: 10px 12px;
+    border-radius: 5px;
+}
+.main-content-oscar-cinema-block-container {
+    display: flex;
+    width: 100%;
+    border-radius: 10px
+}
+.main-content-oscar-cinema-block-container:hover {
+    background-color: #ddd;
+}
+.first-oscar-cinema-content {
+    background-color: rgb(250, 173, 173);
+}
+
+
+
+.oscar-cinema-main-information-block {
+    padding: 20px 0 20px 20px;
+    width: 70%;
+    display: flex;
+}
+.main-information-block-image img {
+    cursor: pointer;
+    border-radius: 5px;
+    width: 60px;
+    height: 96px;
+}
+.main-information-block-title {
+    font-family: "Graphik Kinopoisk LC Web",Arial,Tahoma,Verdana,sans-serif;
+    padding-left: 40px;
+}
+.main-information-block-title h1 {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.main-information-block-title h6 {
+    font-size: 14px;
+    padding: 7px 0;
+}
+.main-information-block-title p {
+    font-size: 14px;
+    color: #717171;
+}
+.main-information-block-title h3 {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    margin-top: 15px;
+    background-color: #F60;
+    display: inline-block;
+    padding: 6px 13px;
+    border-radius: 7px;
+}
+.main-information-block-title h3:hover {
+    background-color: #093;
+}
+.oscar-cinema-main-raiting-block {
+    align-items: center;
+    width: 50%;
+    display: flex;
+}
+.main-rating-block {
+    display: flex;
+}
+.main-rating-block h2 {
+    color: #093;
+    font-size: 18px;
+}
+.main-rating-block h6 {
+    width: 53px;
+    margin-left: 5px;
+    color: #717171;
+    font-size: 13px;
+}
+.main-rating-watched-system {
+    cursor: pointer;
+    margin: 0 50px;
+    align-items: center;
+    display: flex;
+    background-color: #FFF;
+    border: 1px solid #ddd;
+    padding: 7px 30px 7px 25px;
+    border-radius: 5px;
+}
+.main-rating-watched-system-different {
+    cursor: pointer;
+    margin: 0 50px;
+    align-items: center;
+    display: flex;
+    background-color: #FFF;
+    border: 1px solid #ddd;
+    padding: 9px 26px 9px 26px;
+    border-radius: 5px;
+}
+.main-rating-watched-system-different h3 {
+    font-size: 14px;
+    padding-left: 5px;
+}
+.main-rating-client-rating-block {
+    cursor: pointer;
+    background-color: #093;
+    border-radius: 5px;
+    padding: 10px 12px;
+    display: inline-block;
+}
+.main-rating-watched-system h3 {
+    padding-left: 5px;
+    font-size: 14px;
+}
+.main-rating-client-rating-block h4 {
+    color: #FFF;
+}
+.main-rating-column-view {
+    cursor: pointer;
+    margin-left: 15px;
+}
+.main-rating-client-rating-block-different {
+    cursor: pointer;
+}
+.main-rating-column-view:hover {
+    filter: invert(27%) sepia(76%) saturate(3046%) hue-rotate(134deg) brightness(98%) contrast(101%);
+}
+.main-information-block-image-different img {
+    width: 120px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+
+/* ================================= MAIN - SECTION - END ================================= */
+
+.footer {
+    margin-top: 100px;
+    background-color: #ddd;
+    font-family: PF DinDisplay,Helvetica,Arial;
+}
+.footer-main-text-content{
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+}
+.footer-boldtext{
+    color: #666666; 
+    font-weight: 700;
+    margin: 0px 0px 20px;
+}
+.footer-ul a{
+    color: #a6a6a6;
+}
+.footer-ul li{
+    padding: 0px 0px 9px;
+}
+.footer-main-links-content{
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+}
+.footer-phonenumber{
+    color: #a6a6a6;
+    font-size: 24px;
+    padding: 0px 0px 10px;
+}
+.footer-email{
+    color: #a6a6a6;
+    font-size: 24px;
+    padding: 0px 0px 20px;
+}
+.footer-apps-img img {
+    width: 124px;
+    height: 40px;
+}
+.footer-apps-img li {
+    padding: 0px 20px 0px 0px;
+}
+.footer-users-and-partners {
+    margin: 0 0px 37px;
+    justify-content: space-between;
+}
+.footer-On-devices {
+    margin: 0 0px 37px 20px; 
+}
+.footer-User-support{
+    margin: 0 0px 37px;
+}
+.our-social-networks {
+    display: flex;
+    justify-content: space-between;
+}
+.our-social-networks li {
+    padding: 0 10px;
+}
+.our-social-networks svg:hover {
+    fill: #f60;
+}
+.footer span:hover {
+    color: #f60;
+    cursor: pointer;
+}
+.footer {
+    padding: 75px 0;
+}
+
+
+/* =========================     ========================= */
+/* ========================= END ========================= */
+/* =========================     ========================= */
+
+
+@media only screen and (max-width: 1160px) {
+
+    .wrapper-content {
+        max-width: 1100px;
+        padding: 0 50px;
+        margin: 0 auto;
+    }
+    .main-content {
+        max-width: 950px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    .menu-main-content {
+        font-size: 13px;
+    }
+    .menu-content-list-categories {
+        width: 90%;
+        padding: 0 20px;
+    }
+    .menu-content-list-profile-different-login {
+        display: block;
+        width: 10%;
+    }
+    .profile-search-system, .profile-login-system {
+        display: none;
+    }
+    .profile-promotion-system h1 {
+        padding: 5px 15px;
+    }
+    .profile-promotion-system {
+        margin-left: 60px;
+    }
+    .categories-main-content {
+        width: 100%;
+    }
+    .categories-main-content li {
+        padding: 0 15px;
+    }
+    .menu-content-list-logo {
+        width: 10%;
+    }
+    .menu-content-list-logo img {
+        width: 100%;
+    }
+    .page-promo {
+        width: 1160px;
+        max-width: 1160px;
+    }
+    .section, .footer {
+        width: 1160px;
+        max-width: 1160px;
+    }
+}

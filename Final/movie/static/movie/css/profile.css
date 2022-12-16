@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+a {
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.header {
+    z-index: 12;
+    position: fixed;
+    width: 100%;
+    color: #FFF;
+    background-color: rgb(255, 144, 0);
+}
+.header a {
+    color: #FFF;
+}
+.wrapper-content {
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+.main-content {
+    max-width: 1050px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+.menu-main-content {
+    width: 100%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+.menu-content-list-logo {
+    cursor: pointer;
+    width: 10%;
+}
+.menu-content-list-categories {
+    padding: 0 20px;
+    width: 70%;
+}
+.menu-content-list-categories a {
+    color: #FFF;
+    text-decoration: none;
+    cursor: default;
+}
+.menu-content-list-categories h1 {
+    transition: all 0.3s ease-in-out;
+}
+.menu-content-list-categories h1:hover {
+    color: #000;
+}
+.categories-main-content {
+    display: flex;
+}
+.categories-main-content li {
+    cursor: pointer;
+    padding: 0 10px;
+}
+.categories-main-content h1 {
+    text-transform: uppercase;
+}
+.menu-content-list-profile {
+    width: 25%;
+}
+.profile-subscription-system {
+    width: 300px;
+}
+.profile-main-content {
+    width: 100%;
+    display: flex;
+}
+.profile-main-content li {
+    padding: 0 7px;
+}
+.profile-promotion-system {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+}
+.profile-promotion-system:hover {
+    border: 1px solid #000;
+    color: #000;
+}
+.profile-promotion-system h1 {
+    padding: 7px 15px;
+}
+.profile-search-system {
+    cursor: pointer;
+    margin: auto;
+}
+.profile-search-system svg {
+    transition: all 0.3s ease-in-out;
+}
+.profile-search-system svg:hover {
+    fill: #000;
+}
+.profile-login-system {
+    margin: auto;
+}
+.profile-login-system h1 {
+    transition: all 0.3s ease-in-out;
+}
+.profile-login-system h1:hover {
+    color: #000;
+}
+
+
+/* ========================================== HEADER - END ========================================== */
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+.main-content-profile-container-block {
+    width: 100%;
+    display: flex;
+}
+.profile-container-block-main-categories {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+.profile-container-block-main-categories h1, h2, h3, h4, h5, h6, p, li {
+    display: inline-block;
+}
+.main-categories-fianl-id-block {
+    width: 100%;
+    display: flex;
+    padding: 0 0 50px 0;
+    align-items: center;
+}
+.final-id-block-avatar-system h2 {
+    padding: 12px 14px;
+    background-color: #F60;
+    color: #FFF;
+    font-size: 18px;
+}
+.final-id-block-name-of-account-system {
+    padding-left: 15px;
+}
+.final-id-block-name-of-account-system p {
+    font-size: 14px;
+    padding-top: 5px;
+    color: #717171;
+}
+.main-categories-block {
+    width: 100%;
+}
+.slider-block-main-container li {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+}
+.slider-blocks h2 {
+    font-family: PF DinDisplay,Helvetica,Arial;
+    font-size: 15px;
+}
+.hr {
+    margin: 50px 0;
+    border: 1px solid #717171;
+}
+.main-categories-bonus-control {
+    align-items: center;
+    display: flex;
+}
+.main-categories-bonus-control h2 {
+    font-size: 14px;
+    padding: 2px 0 0 10px;
+}
+.profile-container-block-main-information {
+    margin-left: 200px;
+}
+.profile-container-block-main-information h1 {
+    font-size: 40px;
+    font-family: Gotham,Verdana;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #333;
+    letter-spacing: 1px;
+    margin: 0 0 46px 0;
+}
+.main-information-input-block {
+    margin: 40px 0 0 0 ;
+    display: flex;
+    flex-direction: column;
+}
+.main-information-input-block input {
+    border-radius: 5px;
+    border: 1px solid #717171;
+    width: 300px;
+    height: 35px;
+    margin: 20px 0 0 0;
+}
+.submit-input {
+    margin: 40px 0 0 0;
+}
+.submit-input h2 {
+    text-align: center;
+    cursor: pointer;
+    color: #FFF;
+    font-weight: 400;
+    padding: 15px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #F60;
+    border: none;
+    border-radius: 5px;
+}
+.select-gender {
+    font-size: 14px;
+    margin-top: 20px;
+    border: 1px solid #717171;
+    border-radius: 5px;
+    width: 305px;
+    height: 38px;
+}
+.select-gender option {
+    font-size: 14px;
+}
+#changes-saved {
+    color: #FFF;
+}
+.main-container-phone-number {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.phone-number-block {
+    top: 80px;
+    position: relative;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    background-color: #FFF;
+}
+.phone-number-title {
+    color: #333;
+    font-size: 28px;
+    padding: 0 0 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: PF DinDisplay,Helvetica,Arial;
+}
+.phone-number-title svg:hover {
+    cursor: pointer;
+    fill: #F60;
+}
+.phone-number-block p {
+    color: #333;
+    font-family: PF DinDisplay,Helvetica,Arial;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.phone-different-input {
+    margin: 30px 0;
+    padding: 0 0 0 10px;
+    width: calc(100% - 12px);
+    height: 35px;
+    border: 1px solid #717171;
+    border-radius: 3px;
+}
+.i-am-not-robot-system {
+    align-items: center;
+    display: flex;
+}
+.i-am-not-robot-system h2 {
+    font-family: PF DinDisplay,Helvetica,Arial;
+    font-size: 15px;
+    padding-left: 10px;
+}
+.i-am-not-robot-system-checkbox {
+    cursor: pointer;
+}
+.i-am-not-robot-system-checkbox:hover {
+    opacity: 0.7;
+}
+.futher-system {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px 0px 0px;
+    width: 100%;
+    height: 35px;
+    background-color: #F60;
+    font-size: 15px;
+    color: #FFF;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+.futher-system:hover {
+    opacity: 0.7;
+}
+.save_button {
+    margin: 0 0 100px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+    background-color: orange;
+    color: #FFF;
+    cursor: pointer;
+}

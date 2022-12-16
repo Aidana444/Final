@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'movie/css/profile.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Final.kz</title>
+</head>
+<body>
+    
+    <header class="header" id="header">
+        <div class="wrapper-content">
+            <div class="menu-main-content">
+                <div class="menu-content-list-logo">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'movie/img/final-logo.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="menu-content-list-categories">
+                    <ul class="categories-main-content">
+                        <a href="{% url 'oscar' %}">
+                            <li>
+                                <h1>Oscar</h1>
+                            </li>
+                        </a>
+                        <a href="{% url 'movies' %}">
+                            <li>
+                                <h1>Movies</h1>
+                            </li>
+                        </a>
+                        <a href="{% url 'series' %}">
+                            <li>
+                                <h1>Series</h1>
+                            </li>
+                        </a>
+                        <a href="{% url 'cartoons' %}">
+                            <li>
+                                <h1>Cartoons</h1>
+                            </li>
+                        </a>
+                        <a href="{% url 'cybersport' %}">
+                            <li>
+                                <h1>Cybersport</h1>
+                            </li>
+                        </a>
+                        <a href="{% url 'top5' %}">
+                            <li>
+                                <h1>TOP - 5</h1>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="menu-content-list-profile">
+                    <ul class="profile-main-content">
+                        <a href="{% url 'subscription' %}">
+                            <li class="profile-promotion-system">
+                                <h1>Try for 99 ₸</h1>
+                            </li>
+                        </a>
+
+                        <li class="profile-search-system">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFF" class="bi-bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </li>
+                        <li class="profile-login-system">
+                            {% if user.is_authenticated %}
+                                <a href="{% url 'profile' %}">
+                                    <h1>{{ user.username }}</h1>
+                                </a>
+                            {% else %}
+                                <a href="{% url 'sign_in' %}">
+                                    <h1>LOG IN</h1>
+                                </a>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container-phone-number" id="main-container-phone-number" style="padding-top: 50px; display: none;">
+        <div class="phone-number-block">
+            <div class="phone-number-title">
+                <h1>Phone number</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#717171" class="bi bi-x-lg" viewBox="0 0 16 16" onclick="showPhone()" id="out-icon">
+                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                    <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                </svg>
+            </div>
+            <p>Enter your phone number and we will send SMS with the confirmation code</p>
+            <input type="number" name="Phone" id="Phone-diff" class="phone-different-input" placeholder="Phone number">
+            <div class="i-am-not-robot-system">
+                <div class="i-am-not-robot-system-checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#717171" class="bi bi-square" viewBox="0 0 16 16" onclick="showPhone()" id="change-icon-empty">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                    </svg>
+                    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#093" class="bi bi-check" viewBox="0 0 16 16" id="change-icon-acces">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                    </svg>
+                </div>
+                <h2>I'm not a robot</h2>
+            </div>
+            <h2 class="futher-system" id="futher-system" onclick="showPhone()">Further</h2>
+        </div>
+    </div>
+
+    <section class="section" id="section" style="padding: 100px 0 0 100px">
+        <div class="main-content">
+            <div class="main-content-profile-container-block">
+
+
+                <div class="profile-container-block-main-categories">
+                    <div class="main-categories-fianl-id-block">
+                        <div class="final-id-block-avatar-system">
+                            <h2>F</h2>
+                        </div>
+                        <div class="final-id-block-name-of-account-system" style="display: flex; flex-direction: column;">
+                            <h2 id="name-of-user">Final</h2>
+                            <span>
+                                <p>FINAL ID: {{ user.username }}</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="main-categories-block">
+                        <div class="text-container-slider-block">
+                            <ul class="slider-block-main-container">
+                                <li class="slider-blocks tablink" onclick="openPage('SubscriptionsAndPayments', this, '#F60')">
+                                    <h2>Subscriptions and payments</h2>
+                                </li>
+                                <li class="slider-blocks tablink" onclick="openPage('MyDevices', this, '#F60')">
+                                    <h2>My Devices</h2>
+                                </li>
+                                <li class="slider-blocks tablink" onclick="openPage('Profile', this, '#F60')" id="defaultOpen">
+                                    <h2 style="color: #F60;">Profile</h2>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="main-categories-bonus-control">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F60" class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <h2>26 bonuses</h2>
+                    </div>
+                    <div class="hr"></div>
+                    <a href="{% url 'sign_out' %}" class="main-categories-logout-control">
+                        <h3 style="color: #F60; cursor: pointer; display: inline-block; font-size: 14px;">Log out of your profile</h3>
+                    </a>
+                </div>
+
+            <form action="index.html">
+                <div class="profile-container-block-main-information">
+                    <div class="main-information-zagolovok">
+                        <h1>PROFILE</h1>
+                        <p id="changes-saved">Changes saved!</p>
+                    </div>
+                    <div class="main-information-input-block">
+                        <h2>NICKNAME</h2>
+                        <input type="text" name="Nickname" id="Nickname" required placeholder="{{ user.username }}">
+                    </div>
+                    <div class="main-information-input-block">
+                        <h2>EMAIL</h2>
+                        <input type="text" name="Email" id="Email" required placeholder="{{ user.email }}">
+                    </div>
+                    <div class="main-information-input-block">
+                        <h2>PHONE NUMBER</h2>
+                        <input style="cursor: pointer;" type="number" name="Phone" id="Phone_inpt" class="phone-input" required readonly onclick="showPhone()">
+                    </div>
+                    <div class="main-information-input-block">
+                        <h2>GENDER</h2>
+                        <select name="select" id="select" class="select-gender"required>
+                            <option value="Select"><p>Select</p></option>
+                            <option value="Male"><h2>Male</h2></option>
+                            <option value="Female"><h2>Female</h2></option>
+                        </select>
+                    </div>
+                    <div class="submit-input" id="app">
+                        <button id="changeBtn" class="save_button">Save Changes</button>
+                    </div>
+                </div>
+            </form>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'movie/js/input.js' %}"></script>
+    <script src="{% static 'movie/js/slider-description.js' %}"></script>
+
+</body>
+</html>
