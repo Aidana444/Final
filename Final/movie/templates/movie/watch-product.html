@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'movie/css/watch-product.css' %}">
+    <link rel="shortcut icon" href="icons/final-con.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Time to Die - FINAL.KZ</title>
+</head>
+<body>
+    
+    <header class="header" id="header">
+        <div class="wrapper-content">
+            <div class="menu-main-content">
+                <div class="menu-content-list-logo">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'movie/img/final-logo.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="menu-content-list-categories">
+                    <ul class="categories-main-content">
+                        <a href="{% url 'oscar' %}">
+                            <li>
+                                <h1>Oscar</h1>
+                            </li>
+                        </a>
+                        <a href="{% url 'movies' %}">
+                            <li>
+                                <h1>Movies</h1>
+                            </li>
+                        </a>
+                        <a href="{% url 'series' %}">
+                            <li>
+                                <h1>Series</h1>
+                            </li>
+                        </a>
+                        <a href="{% url 'cartoons' %}">
+                            <li>
+                                <h1>Cartoons</h1>
+                            </li>
+                        </a>
+                        <a href="{% url 'cybersport' %}">
+                            <li>
+                                <h1>Cybersport</h1>
+                            </li>
+                        </a>
+                        <a href="{% url 'top5' %}">
+                            <li>
+                                <h1>TOP - 5</h1>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="menu-content-list-profile">
+                    <ul class="profile-main-content">
+                        <a href="{% url 'subscription' %}">
+                            <li class="profile-promotion-system">
+                                <h1>Try for 99 ₸</h1>
+                            </li>
+                        </a>
+
+                        <li class="profile-search-system">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFF" class="bi-bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </li>
+                        <li class="profile-login-system">
+                            {% if user.is_authenticated %}
+                                <a href="{% url 'profile' %}">
+                                    <h1>{{ user.username }}</h1>
+                                </a>
+                            {% else %}
+                                <a href="{% url 'sign_in' %}">
+                                    <h1>LOG IN</h1>
+                                </a>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" id="section" style="padding-top: 50px; margin-top: -83px">
+            <div class="video-product">
+                <video src="videos/trailer.mp4" loop autoplay muted class="main-video-of-product"></video>
+            </div>
+        <div class="main-container-about-product">
+            <div class="wrapper-content">
+                <div class="about-product-main-container-block">
+                    <div class="about-product-image-block">
+                        <img src="https://s8.vcdn.biz/static/f/3934118411/image.jpg/pt/r300x423x4" alt="">
+                    </div>
+                    <div class="about-product-text-block">
+                        <div class="text-block-main-profile">
+                            <ul class="main-profile-container-product">
+                                <li>
+                                    <h4 style="color: #00c3c3;">Purchase</h4>
+                                </li>
+                                <li>
+                                    <h4>No time to die</h4>
+                                </li>
+                                <li>
+                                    <h4>Imdb 7.4, Mgg 7.4</h4>
+                                </li>
+                                <li>
+                                    <h4>16+</h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-block-name-of-product">
+                            <h2>No Time to Die</h2>
+                        </div>
+                        <div class="text-block-script-system-of-product">
+                            <ul class="script-system-of-product-list-block">
+                                <li class="script-system-of-product-watch">
+                                    <button class="btn btn-secondary">Watch
+                                    </button>
+                                    <span><p>From 1  690 KZT</p></span>
+                                </li>
+                                <li class="script-system-of-product-addToFavorites">
+                                    <button class="addToFavorites-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#FFF" class="bi bi-cloud-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5z"/>
+                                            <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/>
+                                        </svg>
+                                    </button>
+                                    <span><p>Add to Favorites</p></span>
+                                </li>
+                                <li class="script-system-of-product-liked">
+                                    <button class="like-btn">
+                                        <img src="icons/like.svg" alt="">
+                                    </button>
+                                    <span><p>4K</p></span>
+                                </li>
+                                <li class="script-system-of-product-dislike">
+                                    <button class="dislike-btn">
+                                        <img src="icons/like.svg" alt="">
+                                    </button>
+                                    <span><p>547</p></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content-top5-system" style="margin-top: 200px;">
+            <div class="main-content">
+                <div class="top5-system-main-text-container">
+                    <div class="text-container-slider-block">
+                        <ul class="slider-block-main-container">
+                            <li class="slider-blocks tablink" onclick="openPage('Description', this, '#F60')" id="defaultOpen">
+                                <h2>DESCRIPTION</h2>
+                            </li>
+                            <li class="slider-blocks tablink" onclick="openPage('PersonsandTeams', this, '#F60')">
+                                <h2>PERSONS AND TEAMS</h2>
+                            </li>
+                            <li class="slider-blocks tablink" onclick="openPage('TrailerandGallery', this, '#F60')">
+                                <h2>TRAILERS AND GALLERY</h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="Description" class="main-container-about-page-of-product tabcontent">
+                    <div class="text-container-zagolovok">
+                        <h6>2021</h6>
+                        <p>,</p>
+                        <h5>Action movie</h5>
+                        <p>,</p>
+                        <h5>Thriller</h5>
+                        <p>,</p>
+                        <h5>Adventures</h5>
+                        <p>,</p>
+                        <h5>Foreign</h5>
+                        <p>,</p>
+                        <h5>United Kingdom</h5>
+                        <p>,</p>
+                        <h5>USA</h5>
+                    </div>
+                    <div class="text-container-about-a-product">
+                        <div class="screen-resolution-system">
+                            <h4>Full HD</h4>
+                        </div>
+                        <div class="film-extension-system">
+                            <h4>163 minutes</h4>
+                        </div>
+                    </div>
+                    <div class="text-container-main-information-about-of-production">
+                        <h2>There comes a time when the famous agent 007 retires from the service and spends his days in Jamaica. 
+                            When his old CIA comrade shows up on the island asking for help, his life changes. 
+                            They must rescue a kidnapped scientist and face off against a villain with a superweapon in his hands.
+                        </h2>
+                    </div>
+                    <div class="text-container-our-social-networks">
+                        <ul class="social-networks">
+                            <li class="social-networks-facebook">
+                                <a href="">
+                                    <i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F60" class="bi bi-facebook" viewBox="0 0 16 16">
+                                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                        </svg>
+                                    </i>
+                                </a>
+                            </li>
+
+                            <li class="social-networks-whatsapp">
+                                <a href="">
+                                    <i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F60" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                        </svg>
+                                    </i>
+                                </a>
+                            </li>
+
+                            <li class="social-networks-twitter">
+                                <a href="">
+                                    <i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F60" class="bi bi-twitter" viewBox="0 0 16 16">
+                                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                        </svg>
+                                    </i>
+                                </a>
+                            </li>
+
+                            <li class="social-networks-instagram">
+                                <a href="">
+                                    <i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F60" class="bi bi-instagram" viewBox="0 0 16 16">
+                                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                        </svg>
+                                    </i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="name-comment">
+                        <textarea name="textarea-name"  placeholder="User Name" cols="30" rows="2"></textarea>
+                    </div>
+                    <div class="comment">
+                        <textarea  cols="30" rows="10" placeholder="Enter message..."></textarea>
+                    </div>
+
+                    <div class="hr"></div>
+                    <div class="main-content-client-watch-system">
+                        <ul class="client-watch-system-different-settings">
+                            <li class="available-on-devices">
+                                <h2>Available On Devices</h2>
+                                <div class="availableOnDevicesColumnTwo">
+                                    <ul class="available-on-devices-technical-profits-first-column">
+                                        <li class="technical-device">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#666666" class="bi bi-apple" viewBox="0 0 16 16">
+                                                <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"/>
+                                                <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"/>
+                                            </svg>
+                                            <p>iOS</p>
+                                        </li>
+    
+                                        <li class="technical-device">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#666666" class="bi bi-tv" viewBox="0 0 16 16">
+                                                <path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.758.758 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"/>
+                                            </svg>
+                                            <p>Smart TV</p>
+                                        </li>
+    
+                                        <li class="technical-device">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#666666" class="bi bi-projector" viewBox="0 0 16 16">
+                                                <path d="M14 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM2.5 6a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4Zm0 2a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4Z"/>
+                                                <path fill-rule="evenodd" d="M0 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2 1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1H5a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1 2 2 0 0 1-2-2V6Zm2-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/>
+                                            </svg>
+                                            <p>Media Players</p>
+                                        </li>
+                                    </ul>
+    
+                                    <ul class="available-on-devices-technical-profits-second-column">
+                                        <li class="technical-device">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#666666" class="bi bi-playstation" viewBox="0 0 16 16">
+                                                <path d="M15.858 11.451c-.313.395-1.079.676-1.079.676l-5.696 2.046v-1.509l4.192-1.493c.476-.17.549-.412.162-.538-.386-.127-1.085-.09-1.56.08l-2.794.984v-1.566l.161-.054s.807-.286 1.942-.412c1.135-.125 2.525.017 3.616.43 1.23.39 1.368.962 1.056 1.356ZM9.625 8.883v-3.86c0-.453-.083-.87-.508-.988-.326-.105-.528.198-.528.65v9.664l-2.606-.827V2c1.108.206 2.722.692 3.59.985 2.207.757 2.955 1.7 2.955 3.825 0 2.071-1.278 2.856-2.903 2.072Zm-8.424 3.625C-.061 12.15-.271 11.41.304 10.984c.532-.394 1.436-.69 1.436-.69l3.737-1.33v1.515l-2.69.963c-.474.17-.547.411-.161.538.386.126 1.085.09 1.56-.08l1.29-.469v1.356l-.257.043a8.454 8.454 0 0 1-4.018-.323Z"/>
+                                            </svg>
+                                            <p>Playstation</p>
+                                        </li>
+    
+                                        <li class="technical-device">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#666666" class="bi bi-controller" viewBox="0 0 16 16">
+                                                <path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1v-1z"/>
+                                                <path d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729c.14.09.266.19.373.297.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466.206.875.34 1.78.364 2.606.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527-1.627 0-2.496.723-3.224 1.527-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.34 2.34 0 0 1 .433-.335.504.504 0 0 1-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a13.748 13.748 0 0 0-.748 2.295 12.351 12.351 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.354 12.354 0 0 0-.339-2.406 13.753 13.753 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27-1.036 0-2.063.091-2.913.27z"/>
+                                            </svg>
+                                            <p>Consoles</p>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            <li class="translation">
+                                <h2>Translation</h2>
+                                <h3>
+                                    Russian, Ukrainian, English
+                                </h3>
+                            </li>
+                            <li class="subtitles">
+                                <h2>Subtitles</h2>
+                                <h3>
+                                    Russian, English , Estonian, Latvian, Ukrainian (forced subtitles), Lithuanian, Russian (forced subtitles)
+                                </h3>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="PersonsandTeams" class="main-container-about-page-of-product tabcontent">
+                    <div class="about-page-of-product-main-container-block">
+                        <div class="about-page-of-product-first-column-of-persons">
+                            <ul class="first-column-of-persons-main-container">
+                                <li class="persons-main-container-table-block">
+                                    <a href="">
+                                        <img src="https://s8.vcdn.biz/static/f/2318408981/image.jpg/pt/r0x0x4" alt="">
+                                    </a>
+                                    <div class="table-block-text-content">
+                                        <h2>Adelaide Kane</h2>
+                                        <p>Adelaide Kane</p>
+                                    </div>
+                                </li>
+    
+                                <li class="persons-main-container-table-block">
+                                    <a href="">
+                                        <img src="https://s7.vcdn.biz/static/f/2318038261/image.jpg/pt/r0x0x4" alt="">
+                                    </a>
+                                    <div class="table-block-text-content">
+                                        <h2>Johnny Messner</h2>
+                                        <p>Johnny Messner</p>
+                                    </div>
+                                </li>
+    
+                                <li class="persons-main-container-table-block">
+                                    <a href="">
+                                        <img src="https://s2.vcdn.biz/static/f/2312212061/image.jpg/pt/r0x0x4" alt="">
+                                    </a>
+                                    <div class="table-block-text-content">
+                                        <h2>Costas Mandylor</h2>
+                                        <p>Costas Mandylor</p>
+                                    </div>
+                                </li>
+                                
+                                <li class="persons-main-container-table-block">
+                                    <a href="">
+                                        <img src="https://s4.vcdn.biz/static/f/2312275261/image.jpg/pt/r0x0x4" alt="">
+                                    </a>
+                                    <div class="table-block-text-content">
+                                        <h2>Frank Grillo</h2>
+                                        <p>Frank Grillo</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="about-page-of-product-second-column-of-persons">
+                            <ul class="second-column-of-persons-main-container">
+                                <li class="persons-main-container-table-block">
+                                    <a href="">
+                                        <img src="https://img.tsn.ua/cached/320/tsn-87394d020f46df1bdfb04b5785c6f4e0/thumbs/x/53/82/2ea578e6d484a6c92b82fc9a486e8253.jpeg" alt="">
+                                    </a>
+                                    <div class="table-block-text-content">
+                                        <h2>Brandon Thomas</h2>
+                                        <p>Brandon Thomas</p>
+                                    </div>
+                                </li>
+    
+                                <li class="persons-main-container-table-block">
+                                    <a href="">
+                                        <img src="https://static.tvmaze.com/uploads/images/original_untouched/103/257750.jpg" alt="">
+                                    </a>
+                                    <div class="table-block-text-content">
+                                        <h2>C.J. Perry</h2>
+                                        <p>C.J. Perry</p>
+                                    </div>
+                                </li>
+    
+                                <li class="persons-main-container-table-block">
+                                    <a href="">
+                                        <img src="https://s3.vcdn.biz/static/f/2312837751/image.jpg/pt/r0x0x4" alt="">
+                                    </a>
+                                    <div class="table-block-text-content">
+                                        <h2>Lochlyn Munro</h2>
+                                        <p>Lochlyn Munro</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="about-page-of-product-third-column-of-persons">
+                            <ul class="third-column-of-persons-main-container">
+                                <li class="persons-main-container-table-block">
+                                    <a href="">
+                                        <img src="https://s7.vcdn.biz/static/f/2312199601/image.jpg/pt/r0x0x4" alt="">
+                                    </a>
+                                    <div class="table-block-text-content">
+                                        <h2>Bruce Willis</h2>
+                                        <p>Bruce Willis</p>
+                                    </div>
+                                </li>
+    
+                                <li class="persons-main-container-table-block">
+                                    <a href="">
+                                        <img src="https://static.cinemagia.ro/img/db/actor/02/31/38/corey-large-282122l.jpg" alt="">
+                                    </a>
+                                    <div class="table-block-text-content">
+                                        <h2>Corey Large</h2>
+                                        <p>Corey Large</p>
+                                    </div>
+                                </li>
+    
+                                <li class="persons-main-container-table-block">
+                                    <a href="">
+                                        <img src="https://s8.vcdn.biz/static/f/2312219591/image.jpg/pt/r0x0x4" alt="">
+                                    </a>
+                                    <div class="table-block-text-content">
+                                        <h2>Luke Wilson</h2>
+                                        <p>Luke Wilson</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main-content-client-watch-system">
+                        <ul class="client-watch-system-different-settings">
+                            <li class="available-on-devices">
+                                <h2>Director</h2>
+                                <h6>Edward Drake</h6>
+
+                            <li class="translation">
+                                <h2>Producers</h2>
+                                <h3>
+                                    Bill Bromiley<br>
+                                    Joe Di Maio<br>
+                                    Corey Large
+                                </h3>
+                            </li>
+                            <li class="subtitles">
+                                <h2>Scenario</h2>
+                                <h3>
+                                    Corey Large<br>
+                                    Edward Drake
+                                </h3>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="TrailerandGallery" class="main-container-about-page-of-product tabcontent">
+                    <div class="about-page-of-product-images-container-block">
+                        <div class="images-container-first-block">
+                            <img src="https://s6.vcdn.biz/static/f/2767594461/8.jpg/pt/r0x284x4" alt="">
+                        </div>
+                        <div class="images-container-second-block">
+                            <div class="images-container-second-block-first-image">
+                                <img src="https://s8.vcdn.biz/static/f/3044924261/24.jpg/pt/r0x132x4" alt="">
+                            </div>
+                            <div class="images-container-second-block-second-image">
+                                <img src="https://s8.vcdn.biz/static/f/3044924171/16.jpg/pt/r0x132x4" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hr"></div>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="main-content">
+        <div class="footer-main-text-content">
+            <div class="footer-users-and-partners">
+                <p class="footer-boldtext">Our Pages</p>
+                <div class="footer-uap-uls">
+                    <ul class="footer-ul" style="width: 100%; padding: 0 100px 0 0; column-count: 2;">
+                        <li><a href="{% url 'home' %}"><span>Home</span></a></li>
+                        <li><a href="{% url 'oscar' %}"><span>Oscar</span></a></li>
+                        <li><a href="{% url 'movies' %}"><span>Movies</span></a></li>
+                        <li><a href="{% url 'series' %}"><span>Series</span></a></li>
+                        <li><a href="{% url 'cartoons' %}"><span>Cartoons</span></a></li>
+                        <li><a href="{% url 'cybersport' %}"><span>Cybersport</span></a></li>
+                        <li><a href="{% url 'top5' %}"><span>Top-5</span></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-On-devices">
+                <p class="footer-boldtext">Subscription and Registration</p>
+                <ul class="footer-ul">
+                    <li><a href="{% url 'subscription' %}"><span>All about subscription</span></a></li>
+                    <li><a href="{% url 'sign_up' %}"><span>Registration</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-User-support">
+                <p class="footer-boldtext">User support</p>
+                <div class="footer-phonenumber">+7 (707) 801 86 16</div>
+                <div class="footer-email"><span>support@final.kz</span></div>
+                <ul class="footer-ul" style="display: flex; justify-content: space-between;">
+                    <li><a href="#"><span>FAQ</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-main-links-content">
+            <div class="footer-main-links-left-content">
+                <p class="footer-boldtext">Our applications</p>
+                <ul class="footer-apps-img" style="display: flex;">
+                    <li><a href=""><img src="https://s6.vcdn.biz/static/39165961/applications-smart-tv.png/pt/r0x0x4" alt="app"></a></li>
+                    <li><a href=""><img src="https://s7.vcdn.biz/static/39165971/applications-app-store.png/pt/r0x0x4" alt="app"></a></li>
+                    <li><a href=""><img src="https://s9.vcdn.biz/static/39165991/applications-google-play.png/pt/r0x0x4" alt="app"></a></li>
+                    <li><a href=""><img src="https://s8.vcdn.biz/static/f/2242444741/image.jpg/pt/r0x0x4" alt="app"></a></li>
+                </ul>
+            </div>
+            <div  class="footer-main-links-right-content">
+                <p class="footer-boldtext">Join us on social networks</p>
+                <div>
+                    <ul class="our-social-networks">
+                        <li>
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#666666" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                  </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#666666" class="bi bi-telegram" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                                  </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#666666" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                  </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#666666" class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                                  </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#666666" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                  </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+    </footer>
+
+    <script src="{% static 'movie/js/slider-description.js' %}"></script>
+
+</body>
+</html>
